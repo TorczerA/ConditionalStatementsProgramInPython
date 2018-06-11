@@ -1,0 +1,88 @@
+from time import sleep
+from os import system, name  # For defining the clear() function
+
+
+def clear():  # THIS FUNCTION IS FOR CLEARING THE SCREEN JUST LIKE clrscr() in C++
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+
+while 1:
+    print("------------------------Conditional Statements Program-----------------------")
+    print()
+    print("--------------------------------Menu----------------------------------------")
+    print("1. If-else")
+    print("2. Nested If-else")
+    print("3. Exit")
+    ch = int(input("Please choose your option -> "))
+    if ch == 3:
+        print("Conditional Statements Program Exiting")
+        sleep(1)
+        print("-------")
+        print("--BYE--")
+        print("-------")
+        sleep(1)
+        break
+    elif ch == 1:
+        clear()
+        print("--This program will demonstrate how If-else statement works--")
+        print("We will check if a given number is even or odd using If statement")
+        print("Please input a number to check whether it is even or odd")
+        num = int(input("-> "))
+        if num % 2 == 0:
+            print("The number is even!")
+        else:
+            print("The number is odd!")
+        print("Do you want to see the source code for the mechanism ? (y/n)")
+        flag1 = input("-> ")
+        if flag1 == 'y' or flag1 == 'Y':
+            clear()
+            print("------------------------Source Code-------------------")
+            print(""'num=int(input("-> "))')
+            print("if num%2==0:")
+            print(""' print("The number is even!")')
+            print("else:")
+            print(""'  print("The number is odd!")')
+            print('------------------------------------------------------')
+        else:
+            pass
+    elif ch == 2:
+        clear()
+        print("--This program will demonstrate how Nested If-else statement works--")
+        print("We will check the largest number among three inputs")
+        print("Please enter three distinct numbers :")
+        n1 = int(input("Input 1 -> "))
+        n2 = int(input("Input 2 -> "))
+        n3 = int(input("Input 3 -> "))
+        if n1 > n2:
+            if n1 > n3:
+                print("Input 1 is the largest, the number is", n1)
+            else:
+                print("Input 3 is the largest, the number is", n3)
+        elif n2 > n3:
+            print("Input 2 is the largest, the number is", n2)
+        else:
+            print("Input 3 is the largest, the number is", n3)
+        print("Do you want to see the source code for the mechanism ? (y/n)")
+        flag2 = input("-> ")
+        if flag2 == 'y' or flag2 == 'Y':
+            clear()
+            print("------------------------Source Code-------------------")
+            print(""'print("Please enter three distinct numbers :")')
+            print(""'n1=int(input("Input 1 -> "))')
+            print(""'n2=int(input("Input 2 -> "))')
+            print(""'n3=int(input("Input 3 -> "))')
+            print("if n1>n2:")
+            print("    if n1>n3:")
+            print(""'        print("Input 1 is the largest, the number is",n1)')
+            print("    else:")
+            print(""'        print("Input 3 is the largest, the number is",n3)')
+            print("elif n2>n3:")
+            print(""'  print("Input 2 is the largest, the number is",n2)')
+            print("else:")
+            print(""'print("Input 3 is the largest, the number is",n3)')
+            print('------------------------------------------------------')
+        else:
+            pass
